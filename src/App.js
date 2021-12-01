@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Pricing from './components/Pricing';
 import Profile from './components/Profile';
 import LogIn from './components/Login';
+import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
@@ -20,6 +21,7 @@ function App() {
   <Route path="/pricing" element={<Pricing/>}></Route>
   <Route path="/profile" element={<Profile/>}></Route>
   <Route path="/login" element={<LogIn/>}></Route>
+  <Route path="/signUp" element={<SignUp/>}></Route>
  </Routes>
 <Footer/>
       </BrowserRouter>

@@ -4,15 +4,22 @@ import {
     Box,
     Avatar,
     Card,
+    Paper,
     Typography,
     Grid,
+    ListItemAvatar,
+    List,
+    ListItem,
+    ListItemText,
+
 } from "@material-ui/core";
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 import img from "../img/profile.jpg";
 
@@ -24,9 +31,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center', 
       },
     Avatar: {
-      width: theme.spacing(30),
-      height: theme.spacing(30),
+      width: theme.spacing(15),
+      height: theme.spacing(15),
       margin: theme.spacing(1),
+    },
+    List: {
+      marginTop: theme.spacing(3),
+      width: '100%',
+      maxWidth: 360,
     },
   }));
 
@@ -36,18 +48,49 @@ export default function Profile() {
     return (
         <div>
             <Container component="main" maxWidth="xs">
+              <Paper>
               <div className={classes.paper}>
                 <Avatar alt="Remy Sharp" src={img} className={classes.Avatar} />
                 <Typography variant="body1" color="secondary">Ronald Chen</Typography>
-                <Typography variant="overline" color="textSecondary">Assistance Manager</Typography>
-                <Grid
-                  direction="row"
-                >
-                    <FacebookIcon size="small" />
-                    <TwitterIcon  size="small" />
-                    <InstagramIcon size="small" />
-                </Grid> 
-              </div>
+                <Typography variant="caption" color="textSecondary">RonaldChen@gmail.com</Typography>
+                </div>
+                 
+           <List className={classes.List}>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <PersonOutlineIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Name" secondary="Ronald Chen" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <MailOutlineIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Email" secondary="RonaldChen@gmail.com" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <HomeOutlinedIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Address" secondary="10 street" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <PhoneOutlinedIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Contact" secondary="123445678" />
+      </ListItem>
+    </List>
+
+</Paper>              
             </Container>
         </div>
     )
