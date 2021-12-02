@@ -11,7 +11,6 @@ import {
     List,
     ListItem,
     ListItemText,
-
 } from "@material-ui/core";
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -24,7 +23,7 @@ import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import img from "../img/profile.jpg";
 
 const useStyles = makeStyles((theme) => ({
-    paper: {
+    Box: {
         marginTop: theme.spacing(8),
         display: 'flex',
         flexDirection: 'column',
@@ -49,7 +48,7 @@ export default function Profile() {
         <div>
             <Container component="main" maxWidth="xs">
               <Paper>
-              <div className={classes.paper}>
+              <div className={classes.Box}>
                 <Avatar alt="Remy Sharp" src={img} className={classes.Avatar} />
                 <Typography variant="body1" color="secondary">Ronald Chen</Typography>
                 <Typography variant="caption" color="textSecondary">RonaldChen@gmail.com</Typography>

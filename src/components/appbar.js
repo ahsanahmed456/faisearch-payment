@@ -5,16 +5,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import {Link} from "react-router-dom"
+import {Link, } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-    '@global': {
-      ul: {
-        margin: 0,
-        padding: 0,
-        listStyle: 'none',
-      },
-    },
     appBar: {
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
@@ -29,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration:"none"
     },
   }));
+
  
 export default function DefaultAppbar() {
   const classes = useStyles();
@@ -41,13 +35,13 @@ export default function DefaultAppbar() {
             faisearch
           </Typography>
           <nav>
-            <Link to="/" variant="button" color="textPrimary" className={classes.link}>
+           <Link to="/" variant="button" color="textPrimary" className={classes.link}>
               Home
             </Link>
-            <Link variant="button" color="textPrimary" to="/pricing" className={classes.link}>
-              pricing
+            <Link to="/pricing" variant="button" color="textPrimary" className={classes.link}>
+              Pricing
             </Link>
-            <Link variant="button" color="textPrimary" to="/profile" className={classes.link}>
+            <Link to="/profile" variant="button" color="textPrimary" className={classes.link}>
               Profile
             </Link>
           </nav>
